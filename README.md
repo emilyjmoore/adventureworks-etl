@@ -23,17 +23,9 @@ Technologies Used:
 - SQL : for analytic queries
 
 Repository Structure:
-adventureworks-etl/
-  sql/
-    create_adventureworks_dm.sql # Creates the target data mart schema
-  etl/
-    etl_multisource_pipeline.py # Main ETL pipeline script
-  scripts/
-    export_customers_to_json.py # Extracts customer data from MySQL → JSON
-    export_salespeople_csv.py # Extracts salesperson data from MySQL → CSV
-  data/
-    dim_customers.json # MongoDB JSON file (created by export script)
-    dim_salesperson.csv # Local CSV source
-  examples/
-    example_queries.sql # Aggregation and analysis SQL examples
-  README.md
+The repository is organized to keep the data sources, scripts, and database setup separate:
+- sql/: Contains the SQL script that creates the target data mart tables.
+- etl/: Holds the primary Python ETL script that runs the entire pipeline.
+- scripts/: Contains the utility scripts used to export data into the source files (like the JSON and CSV).
+- data/: Where the source files (the CSV and JSON files) used by the pipeline are stored.
+- examples/: Includes sample SQL queries for aggregation and basic sales analysis.
