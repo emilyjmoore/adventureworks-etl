@@ -3,18 +3,14 @@ AdventureWorks ETL Data Mart Project
 This project demonstrates my understanding of basic data science systems including ETL pipelines, data integration, dimensional modeling, and analytics. It extracts data from MySQL, MongoDB, and CSV, transforms and cleans it using Python, and loads it into a MySQL data mart for analysis.
 
 
-## Architecture
-**Business process modeled:** Retail Sales  
-Each row in the fact table represents a product sale (order line item) from the AdventureWorks dataset.  
-The data mart follows a **star schema** with one fact table (`fact_sales`) and four dimensions:
-
-| Table | Type | Description |
-|--------|------|--------------|
-| `dim_date` | Dimension | Time attributes (year, quarter, month, etc.) |
-| `dim_customer` | Dimension | Customer demographics and location |
-| `dim_product` | Dimension | Product details and categories |
-| `dim_salesperson` | Dimension | Sales representatives (from CSV) |
-| `fact_sales` | Fact | Sales transactions with quantity, price, tax, freight |
+Architecture: Retail Sales  
+Each row in the fact table represents a product sale from the AdventureWorks dataset.  
+The data mart follows a star schema with one fact table and four dimensions:
+- `dim_date` : Time attributes (year, quarter, month, etc.) 
+- `dim_customer` : Customer demographics and location 
+- `dim_product` : Product details and categories 
+- `dim_salesperson` : Sales representatives (from CSV) 
+- `fact_sales` : Sales transactions with quantity, price, tax, freight 
 
 ---
 
