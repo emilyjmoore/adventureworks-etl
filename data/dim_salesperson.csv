@@ -1,9 +1,18 @@
-SELECT
-  sp.SalesPersonID AS salesperson_id,
-  e.FirstName,
-  e.LastName,
-  st.Name AS territory,
-  e.EmailAddress AS email
-FROM adventureworks.salesperson sp
-JOIN adventureworks.employee e ON sp.SalesPersonID = e.EmployeeID
-LEFT JOIN adventureworks.salesterritory st ON sp.TerritoryID = st.TerritoryID;
+salesperson_id,title,contact_id,login_id,territory
+268,"North American Sales Manager",1011,adventure-works\stephen0,NULL
+275,"Sales Representative",1026,adventure-works\michael9,Northeast
+276,"Sales Representative",1018,adventure-works\linda3,Southwest
+277,"Sales Representative",1016,adventure-works\jillian0,Central
+278,"Sales Representative",1021,adventure-works\garrett1,Canada
+279,"Sales Representative",1019,adventure-works\tsvi0,Southeast
+280,"Sales Representative",1014,adventure-works\pamela0,Northwest
+281,"Sales Representative",1017,adventure-works\shu0,Southwest
+282,"Sales Representative",1020,adventure-works\josé1,Canada
+283,"Sales Representative",1015,adventure-works\david8,Northwest
+284,"European Sales Manager",1013,adventure-works\amy0,NULL
+285,"Sales Representative",1025,adventure-works\jae0,"United Kingdom"
+286,"Sales Representative",1022,adventure-works\ranjit0,France
+287,"Sales Representative",1027,adventure-works\tete0,Northwest
+288,"Pacific Sales Manager",1012,adventure-works\syed0,NULL
+289,"Sales Representative",1023,adventure-works\rachel0,Germany
+290,"Sales Representative",1024,adventure-works\lynn0,Australia
