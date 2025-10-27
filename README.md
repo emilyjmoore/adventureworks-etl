@@ -24,22 +24,16 @@ Technologies Used:
 
 Repository Structure:
 adventureworks-etl/
-│
-├── sql/
-│ └── create_adventureworks_dm.sql # Creates the target data mart schema
-│
-├── etl/
-│ └── etl_multisource_pipeline.py # Main ETL pipeline script
-│
-├── scripts/
-│ ├── export_customers_to_json.py # Extracts customer data from MySQL → JSON
-│ └── export_salespeople_csv.py # Extracts salesperson data from MySQL → CSV
-│
-├── data/
-│ ├── dim_customers.json # MongoDB JSON file (created by export script)
-│ └── dim_salesperson.csv # Local CSV source
-│
-├── examples/
-│ └── example_queries.sql # Aggregation and analysis SQL examples
-│
-└── README.md
+  ├── sql/
+    └── create_adventureworks_dm.sql # Creates the target data mart schema
+  ├── etl/
+    └── etl_multisource_pipeline.py # Main ETL pipeline script
+  ├── scripts/
+    ├── export_customers_to_json.py # Extracts customer data from MySQL → JSON
+    └── export_salespeople_csv.py # Extracts salesperson data from MySQL → CSV
+  ├── data/
+    ├── dim_customers.json # MongoDB JSON file (created by export script)
+    └── dim_salesperson.csv # Local CSV source
+  ├── examples/
+    └── example_queries.sql # Aggregation and analysis SQL examples
+  └── README.md
