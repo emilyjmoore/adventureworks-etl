@@ -12,27 +12,17 @@ The data mart follows a star schema with one fact table and four dimensions:
 - `dim_salesperson` : Sales representatives (from CSV) 
 - `fact_sales` : Sales transactions with quantity, price, tax, freight 
 
----
+Data Sources: 
+- Adventureworks (MySQL) : Structured (OLTP); Tables: `product`, `salesorderheader`, `salesorderdetail`; Used for products, sales, and dates - MongoDB : Semi-structured (NoSQL); `customers` collection (from exported JSON); Represents customer data
+- Local CSV : Flat file; `dim_salesperson.csv`; Contains salesperson information 
 
-## 🧩 Data Sources
-| Source | Type | Origin | Notes |
-|---------|------|--------|-------|
-| **AdventureWorks (MySQL)** | Structured (OLTP) | Tables: `product`, `salesorderheader`, `salesorderdetail` | Used for products, sales, and dates |
-| **MongoDB** | Semi-structured (NoSQL) | `customers` collection (from exported JSON) | Represents customer data |
-| **Local CSV** | Flat file | `dim_salesperson.csv` | Contains salesperson information |
+Technologies Used:
+- Python : (ETL scripts)
+- MySQL : (source + data mart)
+- MongoDB : (NoSQL source)
+- SQL : for analytic queries
 
----
-
-## ⚙️ Technologies Used
-- **Python** (ETL scripts)
-- **MySQL** (source + data mart)
-- **MongoDB** (NoSQL source)
-- **Pandas**, **mysql-connector-python**, **pymongo**
-- **SQL** for analytic queries
-
----
-
-## 📂 Repository Structure
+Repository Structure:
 adventureworks-etl/
 │
 ├── sql/
