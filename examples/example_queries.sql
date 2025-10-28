@@ -7,12 +7,12 @@ JOIN dim_product p ON f.product_id = p.product_id
 GROUP BY d.year, p.product_category
 ORDER BY d.year DESC, revenue DESC;
 
--- 2. Average order size by territory
-SELECT c.territory_name,
+-- 2. Average order size by state province
+SELECT c.state_province,
        AVG(f.line_total) AS avg_order_value
 FROM fact_sales f
 JOIN dim_customer c ON f.customer_id = c.customer_id
-GROUP BY c.territory_name
+GROUP BY c.state_province
 ORDER BY avg_order_value DESC;
 
 -- 3. Top 5 salespeople by total sales
