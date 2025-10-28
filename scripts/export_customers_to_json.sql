@@ -1,0 +1,15 @@
+SELECT
+  c.CustomerID AS customer_id,
+  ct.FirstName,
+  ct.LastName,
+  ct.EmailAddress,
+  a.City,
+  sp.Name AS state_province,
+  cr.Name AS country_region
+FROM adventureworks.customer c
+JOIN adventureworks.customeraddress ca ON c.CustomerID = ca.CustomerID
+JOIN adventureworks.address a ON ca.AddressID = a.AddressID
+JOIN adventureworks.stateprovince sp ON a.StateProvinceID = sp.StateProvinceID
+JOIN adventureworks.countryregion cr ON sp.CountryRegionCode = cr.CountryRegionCode
+JOIN adventureworks.contact ct ON c.CustomerID = ct.ContactID
+LIMIT 200;
